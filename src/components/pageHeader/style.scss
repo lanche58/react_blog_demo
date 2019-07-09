@@ -1,0 +1,20 @@
+.page-header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    padding: (80px - 32px) / 2 40px 0;
+    border-bottom: 1px solid $bc1;
+    line-height: 32px;
+    .title{
+        float: left;
+        font-size: 18px;
+        color: $mc1;
+    }
+    .name{
+        text-decoration: underline;
+        color: $fc3;
+    }
+}

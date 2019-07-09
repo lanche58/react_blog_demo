@@ -1,0 +1,17 @@
+body{
+    font-size: 14px;
+    color: $fc2;
+}
+.clearfix{
+    &:afer{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
