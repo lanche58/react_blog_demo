@@ -5,19 +5,22 @@ import './style.scss';
 class PageHeader extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isLogin: false
-        }
+        this.clickLoginHandle = this.clickLoginHandle.bind(this);
     }
+
     render() {
         return (
             <div className="page-header clearfix">
                 <p className="title">{this.props.title}</p>
                 <div className="fr">
-                    {this.state.isLogin ? <p className="name">任瑞</p> : <Button className="btn-entry">登录</Button>}
+                    {this.props.currentUser ? <p className="name">{this.props.currentUser}</p> : <Button className="btn-entry" onClick={this.clickLoginHandle}>登录</Button>}
                 </div>
             </div>
         )
+    }
+
+    clickLoginHandle() {
+        this.props.loginFn(true);
     }
 }
 export default PageHeader;
